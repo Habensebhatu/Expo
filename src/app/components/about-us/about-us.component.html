@@ -1,0 +1,59 @@
+<div class="container mx-auto px-4 mt-8" >
+  <div class="py-6 border-0 rounded-md border-f1f1f2 bg-[#F4F5F7]">
+    <div class="mx-auto px-4">
+      <div class="flex justify-center items-center">
+        <nav class="breadcrumb flex space-x-2">
+          <a
+            class="breadcrumb-item text-gray-600 hover:text-red-500 text-sm"
+            href="index.html"
+            >{{"Home" | translate}}</a
+          >
+          <span class="material-icons text-md text-gray-400 my-0 mx-1 -mt-1"
+            >chevron_right</span
+          >
+          <span class="breadcrumb-item text-red-500 font-medium text-sm"
+            >{{"About Us" | translate}}</span
+          >
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+<section class="bg-white py-16">
+  <div class="container mx-auto px-4">
+    <div class="flex flex-wrap items-center">
+      <div class="w-full md:w-6/12 md:pe-4 mb-8 md:mb-0">
+        <div class="mb-6">
+          <div class="section-title left-aligned">
+            <h2>{{"Supermarket" | translate}}</h2>
+          </div>
+          <p class="lead">
+            {{"Ontdek Sofani Market" | translate}}
+          </p>
+          <p class="text-base leading-relaxed">
+            {{"Bij binnenkomst" | translate}}
+          </p>
+          <p class="text-base leading-relaxed">
+            {{"Sofani Market in Arnhem" | translate}}
+          </p>
+          <a
+            href="/home"
+            mat-raised-button
+            color="warn"
+            class="mt-4 inline-block bg-gray-800 text-white py-2 px-5 rounded hover:bg-red-400 transition duration-150"
+            >{{"Shop Now" | translate}}</a
+          >
+        </div>
+      </div>
+      <div class="w-full md:w-6/12 md:ps-4 flex items-center">
+        <div class="relative h-60 sm:h-96 w-full">
+          <img
+            class="object-cover h-full w-full rounded-md"
+            [src]="'../../../assets/image/' + log"
+            alt="About Us"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

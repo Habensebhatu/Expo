@@ -1,0 +1,95 @@
+<div class="container mx-auto py-10 flex flex-wrap">
+  <div class="p-4 flex flex-col justify-start items-start md:mr-10">
+    <div class="relative overflow-hidden rounded product-details">
+      <img mat-card-image [src]="selectedImage" alt="Product image" class="w-full h-full object-cover" />
+    </div>
+    <div class="flex flex-wrap justify-start mt-5">
+      <div class="border rounded p-1 m-1" *ngFor="let img of product?.imageUrls">
+        <img class="cursor-pointer object-cover product-img-small" [src]="img.file" (click)="selectedImage = img.file"
+          alt="Product image" />
+      </div>
+    </div>
+  </div>
+  <div class="md:w-1/3 p-4 flex flex-col mt-0 md:mt-12">
+    <div>
+      <h1 style="color: #0d134e" class="fw-bold">{{ product?.title }}</h1>
+    </div>
+    <div class="mt-0">
+      <p class="text-red-500 font-bold text-xl">
+        {{ product?.piecePrice| currency : "EUR" : "symbol" : "1.2-2" }}
+      </p>
+    </div>
+    <div class="flex items-center border rounded-full w-32" style="border-color: #0d134e">
+      <button mat-icon-button (click)="onRemoveQuantity()">
+        <mat-icon>remove</mat-icon>
+      </button>
+      <span class="mx-2">{{ Quetity }}</span>
+      <button mat-icon-button (click)="onAddQuantity()">
+        <mat-icon>add</mat-icon>
+      </button>
+    </div>
+    <mat-card-actions class="mt-5">
+      <button mat-raised-button (click)="onAddToCart()" color="warn">
+        Add To cart
+        <mat-icon style="color: #ffffff; margin-left: 5px">shopping_cart</mat-icon>
+      </button>
+    </mat-card-actions>
+    <div (click)="onAddToWishlist()" class="mt-4">
+      <div (click)="onAddToWishlist()" class="mt-4">
+        <span class="w-10 h-10 flex items-center justify-center rounded-full text-red-500 transition-all duration-300"
+              [ngClass]="{'hover:w-10 hover:h-10': !isInWishlist()}"
+              [style.background-color]="isInWishlist() ? 'transparent' : hovered ? '#FF3EB2' : 'transparent'"
+              (mouseover)="hovered = true" (mouseout)="hovered = false">
+            <mat-icon *ngIf="!isInWishlist()" aria-hidden="false" class="icon-style">favorite_border</mat-icon>
+            <mat-icon *ngIf="isInWishlist()" aria-hidden="false" class="icon-style" style="color: rgb(241, 97, 97)">favorite</mat-icon>
+    
+        </span>
+    </div>
+    
+    </div>
+
+    <div class="mt-4">
+      <p class="text-xl" *ngIf="product?.kilo">{{ product?.kilo }} : Kilos</p>
+      <p class="text-xl ">Categories: {{ product?.categoryName }}</p>
+    </div>
+    <!-- Share feature start -->
+    <div class="flex items-center mt-4">
+      <div class="flex-none mr-2 text-lg">Share</div>
+      <!-- Facebook Icon -->
+      <a href="https://www.facebook.com/sharer/sharer.php?u=https://https://sofanimarket.com/product/{{product?.productId}}" target="_blank">
+        <div
+          class="w-6 h-6 mr-2 bg-[#0D134E] hover:bg-blue-900 text-white rounded-full flex items-center justify-center">
+          <i class="fa fa-facebook" style="font-size: 0.7rem"></i>
+        </div>
+      </a>
+      <!-- Twitter Icon -->
+      <a href="https://twitter.com/intent/tweet?text=Kijk%20eens%20this%20geweldig%20product!&url=https://https://sofanimarket.com/product/{{product?.productId}}"
+        target="_blank">
+        <div
+          class="w-6 h-6 mr-2 bg-[#0D134E] hover:bg-blue-900 text-white rounded-full flex items-center justify-center">
+          <i class="fa fa-twitter" style="font-size: 0.7rem"></i>
+        </div>
+      </a>
+      <a href="https://api.whatsapp.com/send?text=kijk%20eens%20this%20geweldig%20{{product?.title}}%20op%20sofani%20market:%20http:https://sofanimarket.com/product/{{product?.productId}}"
+       target="_blank">
+        <div class="w-6 h-6 bg-[#0D134E] hover:bg-blue-900 text-white rounded-full flex items-center justify-center">
+          <i class="fa fa-whatsapp" style="font-size: 0.7rem"></i>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+<div style="background-color: #f9f8fe">
+  <div class="container mx-auto px-4 py-10">
+    <h2 class="text-2xl font-bold mb-4">Product Description</h2>
+    <p>{{ product?.description }}</p>
+  </div>
+</div>
+
+<div class="container mx-auto relative related-product px-4 py-10">
+  <div class="container mx-auto">
+    <h2 class="text-2xl font-bold mb-4">Related Products</h2>
+    <app-products-slider [products]="relatedProducts" context="productDetails"
+      (productClicked)="changeProductDetails($event)"></app-products-slider>
+  </div>
+</div>
