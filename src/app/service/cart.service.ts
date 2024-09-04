@@ -14,7 +14,7 @@ export class CartService {
     private _showMenu = new Subject<void>();
     showMenu$ = this._showMenu.asObservable();
      sessionId: string ;
-     connectionStringName = 'SofaniMarket';
+     connectionStringName = 'Expo';
 
     constructor(private _snackBar: MatSnackBar, private httpClient: HttpClient) {
         this.sessionId = this.getSessionId();

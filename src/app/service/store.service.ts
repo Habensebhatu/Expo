@@ -22,7 +22,7 @@ export class StoreService {
   private shouldGetAllProducts = false;
   private showDataSubject = new BehaviorSubject<string>('');
   public showData$ = this.showDataSubject.asObservable();
-  connectionStringName = 'SofaniMarket';
+  connectionStringName = 'Expo';
   changeShowData(value: string): void {
 
     this.showDataSubject.next(value);

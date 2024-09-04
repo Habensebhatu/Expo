@@ -28,12 +28,12 @@ export class HomepageComponent {
   wishlistProductIds: string[] = [];
   slides = [
     {
-      image: "../assets/image/bgwebshop.png",
+      image: "../assets/image/Heroimage.jpg",
       //  image: "../assets/image/store2image.jpeg"
     },
     {
       // image: "../assets/image/bgwebshop.png",
-       image: "../assets/image/storeimage.jpeg",
+       image: "../assets/image/heroimag2.jpg",
        animationClass: "",
        promoTitle: "",
        promoText: "",

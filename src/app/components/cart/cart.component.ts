@@ -85,11 +85,11 @@ onRemoveFromCart(item: ProductAddCart): void {
 }
 onCheckout(): void {
   this.http
-    .post('https://webshopfilimon.azurewebsites.net/api/Stripe/checkout', {
+    .post('https://webshopfilimon.azurewebsites.net/api/StripeExpo/checkout', {
       items: this.cart.items,
     })
     .subscribe(async (res: any) => {
-      let stripe = await loadStripe('pk_live_51NTNZBD7MblCQnUpIt68VrorlFv5MOncjPGTUCt4wyFZKWSXQZpDTIvoWSUQ3JTYzXluSlEZrFMGy79pY1voYivB00oYQHH66M');
+      let stripe = await loadStripe('pk_live_51PupbL023wMa17ED9GghmFma2S8mVGLXX5Y95l8CdRG4902IoexrGPeVGGUI7ArrqBI4puGicIIRShWkUc69ai2E00kDZeaZnV');
       stripe?.redirectToCheckout({
         sessionId: res.id,
       });

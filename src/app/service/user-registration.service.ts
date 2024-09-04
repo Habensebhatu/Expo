@@ -15,7 +15,7 @@ export class UserRegistrationService {
   private contactUsApiUrl = 'https://webshopfilimon.azurewebsites.net/api/ContactUs/SubmitContactRequest';
   private currentUserSubject: BehaviorSubject<UserRegistration | null> = new BehaviorSubject<UserRegistration | null>(null);
   public currentUser: Observable<UserRegistration | null> = this.currentUserSubject.asObservable();
-  connectionStringName = 'SofaniMarket';
+  connectionStringName = 'Expo';
   constructor(private httpClient: HttpClient) { 
     const user = localStorage.getItem('currentUser');
     if (user) {

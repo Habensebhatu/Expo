@@ -16,7 +16,7 @@ export class WishlistService {
   // private apiUrlDelete = "https://localhost:7087/api/Wishlist/DeleteFromWishlist";
   private wishlistCount = new BehaviorSubject<number>(0);
   wishlistCount$ = this.wishlistCount.asObservable();
-  connectionStringName = 'SofaniMarket';
+  connectionStringName = 'Expo';
 
   constructor(private httpClient: HttpClient, private _snackBar: MatSnackBar) {}
 
