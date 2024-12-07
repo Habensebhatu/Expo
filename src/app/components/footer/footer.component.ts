@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class FooterComponent {
   // log = 'footer-logo.png';
-  log = "sofani.png";
+  log = "expologo.jpg";
   dayClasses: { [key: string]: boolean } = {};
 
   constructor(private router: Router) {

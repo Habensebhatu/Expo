@@ -28,12 +28,13 @@ export class HomepageComponent {
   wishlistProductIds: string[] = [];
   slides = [
     {
-      image: "../assets/image/Heroimage.jpg",
+      
+      image: "../assets/image/loghomeer.jpg",
       //  image: "../assets/image/store2image.jpeg"
     },
     {
       // image: "../assets/image/bgwebshop.png",
-       image: "../assets/image/heroimag2.jpg",
+      image: "../assets/image/expohabeshlog.png",
        animationClass: "",
        promoTitle: "",
        promoText: "",
@@ -193,12 +194,70 @@ export class HomepageComponent {
       imageUrls: [
         {
           index: 0,
-          file: "../assets/image/Eritreseklederdracht.jpg",
+          file: "../assets/image/HabeshaDressMenen.jpg",
         },
       ],
-      title: "Tilf Habesha/ትልፍ ሓበሻ",
-      piecePrice: 103,
-      categoryName: "Kleding",
+      title: "ባህላዊ ናይ ሓበሻ ክዳን",
+      piecePrice: 150,
+      categoryName: "Women's clothing (ናይ ደቂ ኣንስትዮ ክዳውንቲ)",
+      productId: "jhjjjk",
+      categoryId: "vvvvvvv",
+      description: "hhjdfhjfjhd",
+      quantity: 3,
+      sessionId: "ddd445556",
+      isPopular: true,
+      kilo: 2
+    },
+
+    {
+      imageUrls: [
+        {
+          index: 0,
+          file: "../assets/image/Herrenbekleidung.jpg",
+        },
+      ],
+      title: "Suit(ሱፍ)",
+      piecePrice: 180,
+      categoryName: "Men's Clothing (ናይ ደቂ ተባዕትዮ ክዳውንቲ)",
+      productId: "jhjjjk",
+      categoryId: "vvvvvvv",
+      description: "hhjdfhjfjhd",
+      quantity: 3,
+      sessionId: "ddd445556",
+      isPopular: true,
+      kilo: 2
+    },
+
+    {
+      imageUrls: [
+        {
+          index: 0,
+          file: "../assets/image/balawichama.jpg",
+        },
+      ],
+      title: "ሓበሻ ባህላዊ ጫማ",
+      piecePrice: 20,
+      categoryName: "Shoes Men (ናይ ደቂ ተባዕትዮ ጫማ)",
+      productId: "jhjjjk",
+      categoryId: "vvvvvvv",
+      description: "hhjdfhjfjhd",
+      quantity: 3,
+      sessionId: "ddd445556",
+      isPopular: true,
+      kilo: 2
+    },
+
+    
+    {
+      imageUrls: [
+        {
+          index: 0,
+          file: "../assets/image/ayam.jpg",
+        },
+      ],
+      title: "Aryam book",
+      piecePrice: 10,
+      categoryName: "Books(መጻሕፍቲ)",
       productId: "jhjjjk",
       categoryId: "vvvvvvv",
       description: "hhjdfhjfjhd",
@@ -211,12 +270,12 @@ export class HomepageComponent {
       imageUrls: [
         {
           index: 0,
-          file: "../assets/image/fidelat.jpeg",
+          file: "../assets/image/vaseline.jpg",
         },
       ],
-      title: "Tigrigna Alphabets/ ፊደላት ትግርኛ",
-      piecePrice: 15.90,
-      categoryName: "Boeken",
+      title: "vaseline(ቫዝሊን)",
+      piecePrice: 6,
+      categoryName: "cosmetics(መመላኽዒታት)",
       productId: "jhjjjk",
       categoryId: "vvvvvvv",
       description: "hhjdfhjfjhd",
@@ -229,12 +288,12 @@ export class HomepageComponent {
       imageUrls: [
         {
           index: 0,
-          file: "../assets/image/HairStyle.jpg",
+          file: "../assets/image/Ashenda-ኣሸንዳ.jpg",
         },
       ],
-      title: "hairStyle/ኣርቲፊሻል ጸጉሪ",
-      piecePrice: 21.05,
-      categoryName: "Cosmetica",
+      title: "Ashenda-ኣሸንዳ",
+      piecePrice: 7,
+      categoryName: "Haarverlängerung",
       productId: "jhjjjk",
       categoryId: "vvvvvvv",
       description: "hhjdfhjfjhd",
@@ -247,12 +306,31 @@ export class HomepageComponent {
       imageUrls: [
         {
           index: 0,
-          file: "../assets/image/Berbere1.jpg",
+          file: "../assets/image/2ac.jpg",
+        },
+      ],
+      title: "Big Cross Gold (ዓቢ መስቀል ወርቂ) ",
+      piecePrice: 7,
+      categoryName: "jewellery(ጌጣጌጥ)",
+      productId: "jhjjjk",
+      categoryId: "vvvvvvv",
+      description: "hhjdfhjfjhd",
+      quantity: 3,
+      sessionId: "ddd445556",
+      isPopular: true,
+      kilo: 2
+    },
+  
+    {
+      imageUrls: [
+        {
+          index: 0,
+          file: "../assets/image/dadal.jpg",
         },
       ],
       title: "berbere Spice /በርበሬ",
       piecePrice: 20,
-      categoryName: "Voedsel",
+      categoryName: "Groceries (ምግቢ)",
       productId: "jhjjjk",
       categoryId: "vvvvvvv",
       description: "hhjdfhjfjhd",
@@ -266,12 +344,12 @@ export class HomepageComponent {
       imageUrls: [
         {
           index: 0,
-          file: "../assets/image/Bellamegogo1.jpeg",
+          file: "../assets/image/Mdjaelectric.jpg",
         },
       ],
-      title: "Bella Megogo (ዓብይ መጎጎ)",
-      piecePrice: 543,
-      categoryName: "keuken",
+      title: "Mdja electric",
+      piecePrice: 45,
+      categoryName: "Traditional material (ባህላዊ ንብረት)",
       productId: "jhjjjk",
       categoryId: "vvvvvvv",
       description: "hhjdfhjfjhd",

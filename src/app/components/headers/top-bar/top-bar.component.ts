@@ -9,7 +9,7 @@ export class TopBarComponent {
   Nederland = 'Nederlands-flag.png'
   Eritrea = 'Eritrea-flag.png'
   English = 'English-flag.png'
-  currentLanguage: string = 'Nederlands';
+  currentLanguage: string = 'Deutsch';
 
   constructor(private translate: TranslateService){
     translate.setDefaultLang('nl'); 
@@ -20,7 +20,7 @@ export class TopBarComponent {
     this.translate.use(lang);
     switch (lang) {
       case 'nl':
-        this.currentLanguage = 'Nederlands';
+        this.currentLanguage = 'Deutsch';
         break;
       case 'ti':
         this.currentLanguage = 'ትግሪኛ';
